@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2017", "dom"],
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./transpiled/",
+    "jsx": "react",
+    "baseUrl": "./",
+    "allowJs": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "declaration": false,
+    "declarationMap": false,
+    "composite": false,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@0x/typescript-typings/types",
+      "node_modules/@types"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "paths": {
+      "*": ["node_modules/@types/*", "*"]
+    }
+  },
+  "include": ["./ts/**/*"]
+}
