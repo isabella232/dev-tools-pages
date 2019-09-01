@@ -1,14 +1,14 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
-import { colors } from "ts/variables";
+import { colors } from 'ts/variables';
 
-import { Button as BaseButton } from "./button";
+import { Button as BaseButton } from './button';
 
 const isTouch = Boolean(
-  "ontouchstart" in window ||
+  'ontouchstart' in window ||
     (window as any).navigator.maxTouchPoints > 0 ||
-    (window as any).navigator.msMaxTouchPoints > 0
+    (window as any).navigator.msMaxTouchPoints > 0,
 );
 
 interface CodeProps {
@@ -27,7 +27,7 @@ interface CodeState {
 }
 
 const Button = styled(BaseButton)`
-  opacity: ${isTouch ? "1" : "0"};
+  opacity: ${isTouch ? '1' : '0'};
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -46,14 +46,14 @@ const Container = styled.div`
 
 const Base = styled.div<CodeProps>`
   font-size: 0.875rem;
-  color: ${props => (props.language === undefined ? colors.white : "inherit")};
+  color: ${props => (props.language === undefined ? colors.white : 'inherit')};
   background-color: ${props =>
     props.isLight
-      ? "rgba(255,255,255,.15)"
+      ? 'rgba(255,255,255,.15)'
       : props.language === undefined
       ? colors.black
-      : "#F1F4F5"};
-  white-space: ${props => (props.language === undefined ? "nowrap" : "")};
+      : '#F1F4F5'};
+  white-space: ${props => (props.language === undefined ? 'nowrap' : '')};
   position: relative;
 
   ${props =>
@@ -71,6 +71,7 @@ const Base = styled.div<CodeProps>`
 
 const CodeDiff: React.StatelessComponent<any> = ({
   gutterLength,
+  // tslint:disable-next-line:trailing-comma
   ...props
 }) => <code {...props} />;
 const StyledCodeDiff = styled(CodeDiff)`
@@ -149,7 +150,7 @@ class Code extends React.Component<CodeProps, CodeState> {
       isDiff,
       children,
       gutterLength,
-      canCopy
+      canCopy,
     } = this.props;
     const { hlCode } = this.state;
     return (
@@ -162,12 +163,11 @@ class Code extends React.Component<CodeProps, CodeState> {
               <StyledCodeDiff
                 gutterLength={gutterLength}
                 dangerouslySetInnerHTML={
-                  hlCode ? { __html: this.state.hlCode } : null
-                }
+                  hlCode ? { __html: this.state.hlCode } : null}
               />
             )}
           </StyledPre>
-          {!("clipboard" in navigator) ? (
+          {!('clipboard' in navigator) ? (
             <StyledCopyInput
               readOnly={true}
               aria-hidden="true"
@@ -178,7 +178,7 @@ class Code extends React.Component<CodeProps, CodeState> {
         </Base>
         {canCopy ? (
           <Button onClick={this._handleCopyAsync.bind(this)}>
-            {this.state.didCopy ? "Copied" : "Copy"}
+            {this.state.didCopy ? 'Copied' : 'Copy'}
           </Button>
         ) : null}
       </Container>
@@ -191,24 +191,24 @@ class Code extends React.Component<CodeProps, CodeState> {
 
     if (language !== undefined) {
       const { highlight } = await System.import(
-        /* webpackChunkName: 'highlightjs' */ "ts/highlight"
+        /* webpackChunkName: 'highlightjs' */ 'ts/highlight',
       );
 
       this.setState({
-        hlCode: highlight({ language, code, isDiff, gutter, isEtc })
+        hlCode: highlight({ language, code, isDiff, gutter, isEtc }),
       });
     }
   }
   private async _handleCopyAsync(): Promise<void> {
     try {
-      if ("clipboard" in navigator) {
+      if ('clipboard' in navigator) {
         await (navigator as any).clipboard.writeText(this.props.children);
         this.setState({ didCopy: true });
       } else {
         const lastActive = document.activeElement as HTMLElement;
         this._code.current.focus();
         this._code.current.select();
-        document.execCommand("copy");
+        document.execCommand('copy');
         lastActive.focus();
         this.setState({ didCopy: true });
       }

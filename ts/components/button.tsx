@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors, media } from "ts/variables";
+import { colors, media } from 'ts/variables';
 
 interface ButtonProps {
   large?: boolean;

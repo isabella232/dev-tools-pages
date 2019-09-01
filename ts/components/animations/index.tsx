@@ -1,8 +1,8 @@
-import * as React from "react";
-import Lottie from "react-lottie";
-import styled from "styled-components";
+import * as React from 'react';
+import Lottie from 'react-lottie';
+import styled from 'styled-components';
 
-import { media } from "ts/variables";
+import { media } from 'ts/variables';
 
 interface AnimationProps {
   animationData: object;
@@ -21,15 +21,15 @@ class BaseAnimation extends React.PureComponent<
 > {
   public state: AnimationState = {
     height: undefined,
-    width: undefined
+    width: undefined,
   };
   private _timeout = undefined as number;
   public componentDidMount(): void {
     this._updateAnimationSize();
-    window.addEventListener("resize", this._handleResize.bind(this));
+    window.addEventListener('resize', this._handleResize.bind(this));
   }
   public componentWillUnmount(): void {
-    window.removeEventListener("resize", this._handleResize.bind(this));
+    window.removeEventListener('resize', this._handleResize.bind(this));
   }
   public render(): React.ReactNode {
     const { animationData } = this.props;
@@ -45,7 +45,7 @@ class BaseAnimation extends React.PureComponent<
             options={{
               loop: true,
               autoplay: true,
-              animationData
+              animationData,
             }}
           />
         </InnerContainer>

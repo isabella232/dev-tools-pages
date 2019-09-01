@@ -1,11 +1,11 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
-import { ContextInterface, ThemeContext } from "ts/context";
-import { media } from "ts/variables";
+import { ContextInterface, ThemeContext } from 'ts/context';
+import { media } from 'ts/variables';
 
-import { Container } from "./container";
-import { Small } from "./typography";
+import { Container } from './container';
+import { Small } from './typography';
 
 const Header: React.StatelessComponent<{}> = () => (
   <ThemeContext.Consumer>
@@ -13,7 +13,7 @@ const Header: React.StatelessComponent<{}> = () => (
       <StyledHeader>
         <Container>
           <LogoMark>
-            <Logo as={icon as "svg"} />
+            <Logo as={icon as 'svg'} />
             <Title>{title}</Title>
           </LogoMark>
 
