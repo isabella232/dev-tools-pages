@@ -41,6 +41,7 @@
     "styled-normalize": "^8.0.1"
   },
   "devDependencies": {
+    "@0x/tslint-config": "^3.0.1",
     "@types/highlight.js": "^9.12.3",
     "@types/lodash": "4.14.104",
     "@types/node": "*",
