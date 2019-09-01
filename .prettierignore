@@ -1,0 +1,4 @@
+lib
+/ts/**/data.json
+package.json
+

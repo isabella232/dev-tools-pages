@@ -8,7 +8,7 @@ Requires Node version 6.9.5 or higher & yarn v1.9.4
 
 ### 1. Install dependencies:
 
-Make sure you install Yarn v1.9.4 (npm won't work!). 
+Make sure you install Yarn v1.9.4 (npm won't work!).
 
 ```bash
 yarn install
@@ -69,4 +69,3 @@ yarn prettier
 
 -   [atom-typescript](https://atom.io/packages/atom-typescript)
 -   [linter-tslint](https://atom.io/packages/linter-tslint)
-
