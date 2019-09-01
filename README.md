@@ -6,28 +6,17 @@ This repository contains our dev tools pages.
 
 Requires Node version 6.9.5 or higher & yarn v1.9.4
 
-### 1. Install dependencies for monorepo:
+### 1. Install dependencies:
 
-Make sure you install Yarn v1.9.4 (npm won't work!). We rely on our `yarn.lock` file and on Yarn's support for `workspaces` in our monorepo setup.
+Make sure you install Yarn v1.9.4 (npm won't work!). 
 
 ```bash
 yarn install
 ```
 
-### 2. Initial setup
-
-To build this package and all other monorepo packages that it depends on, run the following from the monorepo root directory:
+### 2. Run dev server
 
 ```bash
-PKG=@0x/dev-tools-pages yarn build
-```
-
-Note: Ignore the `WARNING in asset size limit` and `WARNING in entrypoint size limit` warnings.
-
-### 3. Run dev server
-
-```bash
-cd packages/dev-tools-pages
 yarn dev
 ```
 
@@ -35,7 +24,7 @@ Visit [http://localhost:3572/](http://localhost:3572/) in your browser.
 
 The webpage will refresh when source code is changed.
 
-### 4. Code!
+### 3. Code!
 
 There are some basic primitives we'd like you to use:
 
@@ -81,8 +70,3 @@ yarn prettier
 -   [atom-typescript](https://atom.io/packages/atom-typescript)
 -   [linter-tslint](https://atom.io/packages/linter-tslint)
 
-## Contributing
-
-We strongly recommend that the community help us make improvements and determine the future direction of the protocol. To report bugs within this package, please create an issue in this repository.
-
-Please read our [contribution guidelines](../../CONTRIBUTING.md) before getting started.
