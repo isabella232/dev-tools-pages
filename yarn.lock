@@ -146,20 +146,20 @@
   version "15.7.1"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
 
-"@types/react-dom@^16.5.2":
+"@types/react-dom@^16.0.7":
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.0.tgz#ba6ddb00bf5de700b0eb91daa452081ffccbfdea"
   dependencies:
     "@types/react" "*"
 
-"@types/react-loadable@^5.5.0":
+"@types/react-loadable@^5.4.2":
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.5.1.tgz#f04a262f16e9f088098ddad1aa50682ad0984aa7"
   dependencies:
     "@types/react" "*"
     "@types/webpack" "*"
 
-"@types/react-lottie@^1.2.3":
+"@types/react-lottie@^1.2.0":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@types/react-lottie/-/react-lottie-1.2.3.tgz#aa25deecdc6d44e5d367662709c95121b7fe22ae"
   dependencies:
@@ -197,7 +197,7 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/react-tap-event-plugin/-/react-tap-event-plugin-0.0.30.tgz#123f35080412f489b6770c5a65c159ff96654cb5"
 
-"@types/react@*", "@types/react@^16.7.7":
+"@types/react@*", "@types/react@^16.4.2":
   version "16.9.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.2.tgz#6d1765431a1ad1877979013906731aae373de268"
   dependencies:
@@ -1933,8 +1933,8 @@ ejs@^2.6.1:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.2.tgz#3a32c63d1cd16d11266cd4703b14fec4e74ab4f6"
 
 electron-to-chromium@^1.2.7:
-  version "1.3.247"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.247.tgz#ff2332376150436599265b2dfd7a539f214f4ade"
+  version "1.3.248"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.248.tgz#1f5f950797e192e9a951b8a44fc08974b609adcb"
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -4483,7 +4483,7 @@ react-tabs@^2.3.0:
     classnames "^2.2.0"
     prop-types "^15.5.0"
 
-react@^16.6.0:
+react@^16.5.2:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
   dependencies:
